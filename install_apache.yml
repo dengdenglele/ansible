@@ -13,7 +13,7 @@
       ansible.builtin.apt:
         name: apache2
         state: latest
-      when: ansible_distribution == "Ubuntu"
+      when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "24.04"
 
     - name: Add php support for apache
       ansible.builtin.apt:

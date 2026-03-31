@@ -57,3 +57,8 @@ ansible all -m apt -a 'upgrade=dist' --become --ask-become-pass
 ```
 ansible-playbook --ask-become-pass install_apache.yml
 ```
+
+## Gather facts for 'when'
+```
+ansible all -m gather_facts --limit <IP address> | grep ansible_distribution
+```
