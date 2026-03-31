@@ -21,9 +21,19 @@ ansible all --key-file ~/.ssh/ansible -i inventory -m ping
 ls /etc/ansible
 cat /etc/ansible/ansible.cfg
 
-# Run ansible command with local ansible.cfg
+# In ansible repo create a local ansible.cfg file
+touch ansible.cfg
+```
+
+## Run ansible command with local ansible.cfg
+```
 ansible all -m ping
 ansible all --list-hosts
 ansible all -m gather_facts
 ansible all -m gather_facts --limit <IP address>
+```
+
+## Run ansible with elevated ad-hoc commands
+```
+ansible all -m apt -a update_cache=true --become --ask-become-pass
 ```
