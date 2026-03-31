@@ -13,6 +13,7 @@
   - Naming: `ubuntu-1` and `ubuntu-2`
   - Get cloudimg [here](https://cloud-images.ubuntu.com/minimal/releases/noble/release/)
   - Copy link for `ubuntu-24.04-minimal-cloudimg-amd64.img`
+  - Do not forget to install `qemu-guest-agent` package, and rboot &rarr; makes `IPs` in `Summary` section visible
 - 1 * Fedora Cloud 43
   - Get cloudimg [here](https://fedoraproject.org/cloud/download)
   - Copy link for `Fedora Cloud Base 43 QEMU qcow2`
