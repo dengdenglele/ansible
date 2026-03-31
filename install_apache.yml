@@ -20,3 +20,20 @@
         name: libapache2-mod-php
         state: latest
       when: ansible_distribution == "Ubuntu"
+
+    - name: Update repository index
+      ansible.builtin.dnf:
+        update_cache: yes
+      when: ansible_distribution == "Fedora"
+
+    - name: Install httpd (equals apache) package
+      ansible.builtin.dnf:
+        name: httpd
+        state: latest
+      when: ansible_distribution == "Fedora"
+
+    - name: Add php support for apache
+      ansible.builtin.dnf:
+        name: php
+        state: latest
+      when: ansible_distribution == "Fedora"
