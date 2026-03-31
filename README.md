@@ -52,3 +52,8 @@ ansible all -m apt -a 'name=vim state=latest' --become --ask-become-pass
 # Update all packages
 ansible all -m apt -a 'upgrade=dist' --become --ask-become-pass
 ```
+
+## Run playbooks
+```
+ansible-playbook --ask-become-pass install_apache.yml
+```
