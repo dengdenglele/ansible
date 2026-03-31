@@ -7,7 +7,7 @@
     - name: Update repository index
       ansible.builtin.apt:
         update_cache: yes
-      when: ansible_distribution == "Ubuntu"
+      when: ansible_distribution in ["Debian", "Ubuntu"]
 
     - name: Install apache2 package
       ansible.builtin.apt:
