@@ -10,6 +10,7 @@
 ### Setup VMs (via cloud image) on proxmox
 - Use template creation on proxmox according to LLTV [tutorial](https://www.youtube.com/watch?v=MJgIm03Jxdo)
 - 2 * Ubuntu 24.04 LTS
+  - Naming: `ubuntu-1` and `ubuntu-2`
   - Get cloudimg [here](https://cloud-images.ubuntu.com/minimal/releases/noble/release/)
   - Copy link for `ubuntu-24.04-minimal-cloudimg-amd64.img`
 - 1 * Fedora Cloud 43
@@ -20,7 +21,7 @@
     ```
     # Download cloud images
     wget <url link to image>
-    # Enable VGA console in proxmox as root with
+    # Enable VGA console in proxmox as root with (needed for Ubuntu 22.04 and older)
     qm set <VM-ID> --serial0 socket --vga serial0
     # Rezise cloud images to 32G
     qemu-img resize <image-name>.<img/qcow2> 32G
