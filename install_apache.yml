@@ -5,9 +5,9 @@
   tasks:
 
     - name: Update repository index
-      apt:
+      ansible.builtin.apt:
         update_cache: yes
 
     - name: Install apache2 package
-      apt:
+      ansible.builtin.apt:
         name: apache2
