@@ -40,4 +40,6 @@ ansible all -m gather_facts --limit <IP address>
 ansible all -m apt -a update_cache=true --become --ask-become-pass
 ansible all -m apt -a name=vim-nox --become --ask-become-pass
 ansible all -m apt -a name=tmux --become --ask-become-pass
+# Install multiple packages, comma separated in quotes
+ansible all -m apt -a "name=cmatrix,cowsay" --become --ask-become-pass
 ```
