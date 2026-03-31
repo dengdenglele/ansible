@@ -36,8 +36,10 @@ ansible all -m gather_facts --limit <IP address>
 ## Run ansible with elevated ad-hoc commands
 - Consult the apt module [documentation](https://docs.ansible.com/projects/ansible/latest/collections/ansible/builtin/apt_module.html)
 ```
-# apt module
+# Fetch latest metadata about available packages
 ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+# Install a single package
 ansible all -m apt -a name=vim-nox --become --ask-become-pass
 ansible all -m apt -a name=tmux --become --ask-become-pass
 
